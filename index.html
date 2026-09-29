@@ -15,6 +15,7 @@
         <header>
             <div class="wrapper">
                 <a href="#main" class="logo">Full-tack Dev Study</a>
+                        
                 <!-- 메뉴 영역 -->
                 <nav>
                     <!-- 모바일 화면일 때 나타나는 버튼 -->
@@ -29,6 +30,8 @@
             </div>
         </header>
 
+        <button class="btn-theme" aria-label="다크 모드 전환">🌙</button>
+        
         <!-- About 영역 -->
         <section id="main">
             <div class="wrapper">
@@ -134,9 +137,10 @@
                 <Label >Name</Label>
                 <input type="text" placeholder="예 : 신동빈" class="apply-field">
                 <label>E-mail</label>
-                <input type="email" placeholder="예 : gdhrlfehd@naver.com" class="apply-field">
+                <input type="email" placeholder="예 : ghdrlfehd@naver.com" class="apply-field">
                 <label>참여동기</label>
-                <textarea placeholder="스터디에 참여하고 싶은 이유를 간단히 적어주세요." class="apply-field apply-textarea" ></textarea>
+                <textarea placeholder="스터디에 참여하고 싶은 이유를 간단히 적어주세요." maxlength="200" class="apply-field apply-textarea" ></textarea>
+                <p class="char-count">0 / 200자</p>
                 <input type="submit" value="지원하기" class="apply-btn">
             </form>
 
@@ -144,6 +148,10 @@
                 <p>
                     <a href="mailto:sdb9799@naver.com">문의사항</a> /
                     <small>&copy; 2026 웹 기초 프로그래밍 신동빈<small>
+                </p>
+                <p class="clock">
+                    <span class="clock-date">----년 --월 --일 (-)</span>
+                    <span class="clock-time">--:--:--</span>
                 </p>
             </div>
         </section>
