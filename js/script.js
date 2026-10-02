@@ -69,3 +69,30 @@ updateClock(); // 페이지 열람시 한 번 실행
 
 // 정해진 시간(밀리초)마다 함수를 계속 실행
 setInterval(updateClock, 1000); // 이후 1초마다 반복 실행
+
+
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabPanels = document.querySelectorAll('.tab-panel');
+
+tabBtns.forEach((tab) =>{
+    tab.addEventListener('click', () => {
+        tabBtns.forEach((b) => b.classList.remove('active'));
+        tabPanels.forEach((p) => p.classList.remove('active'));
+        
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+    });
+});
+
+const galleryThumbs = document.querySelectorAll('.gallery-thumbs img');
+const galleryMain = document.querySelector('.gallery-main');
+
+galleryThumbs.forEach((thumb) => {
+    thumb.addEventListener('click', () => {
+        galleryThumbs.forEach((t) => t.classList.remove('active'));
+
+        thumb.classList.add('active');
+        galleryMain.src = thumb.src;
+        galleryMain.alt = thumb.alt;
+    });
+});
